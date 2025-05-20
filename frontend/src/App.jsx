@@ -11,17 +11,19 @@ function App() {
   return (
     <>
       <Header currentUser={currentUser} setCurrentUser={setCurrentUser} />
-      <Routes>
-        <Route path="/" element={<Welcome />} />
-        <Route
-          path="/dashboard"
-          element={
-            <PrivateRoute currentUser={currentUser}>
-              <Dashboard />
-            </PrivateRoute>
-          }
-        />
-      </Routes>
+      <section className="main-content">
+        <Routes>
+          <Route path="/" element={<Welcome />} />
+          <Route
+            path="/dashboard"
+            element={
+              <PrivateRoute currentUser={currentUser}>
+                <Dashboard />
+              </PrivateRoute>
+            }
+          />
+        </Routes>
+      </section>
     </>
   );
 }
