@@ -15,6 +15,10 @@ section {
   align-items: center;
 }
 
+a:visited {
+  color: inherit;
+}
+
 .header-wrapper {
   display: flex;
   justify-content: space-between;
@@ -96,6 +100,7 @@ button:hover {
   background: #fffbe6;
   border: 1px solid darkolivegreen;
   border-radius: 10px;
+  border-left: 4px solid darkolivegreen;
   box-shadow: 0 2px 8px rgba(85, 107, 47, 0.07);
   padding: 1.2rem 1.5rem;
   color: darkslategray;
