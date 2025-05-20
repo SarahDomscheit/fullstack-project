@@ -21,7 +21,7 @@ section {
   align-items: center;
   flex-direction: row;
   padding: 1rem;
-  position: relative; /* Wichtig für absolute Positionierung der Kinder */
+  position: relative;
 }
 
 button {
@@ -29,6 +29,10 @@ button {
   color: white;
   padding: 0.5rem;
   border-radius: 8px;
+}
+
+h2 {
+  margin: 0.5rem;
 }
 
 button:hover {
@@ -69,4 +73,45 @@ button:hover {
   font-size: 1rem;
   width: 100%;
   box-sizing: border-box;
+}
+
+.todos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.todo-card {
+  width: 100%;
+  max-width: 350px;
+  min-width: 220px;
+  box-sizing: border-box;
+}
+
+.todo-card {
+  background: #fffbe6;
+  border: 1px solid darkolivegreen;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(85, 107, 47, 0.07);
+  padding: 1.2rem 1.5rem;
+  color: darkslategray;
+  min-width: 250px;
+  max-width: 350px;
+}
+
+.todo-card h3 {
+  margin: 0 0 0.5rem 0;
+  color: darkolivegreen;
+}
+
+@media (max-width: 500px) {
+  .todo-card {
+    max-width: 95vw;
+    min-width: unset;
+    padding: 1rem;
+  }
 }

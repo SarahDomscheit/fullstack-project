@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { NavLink, useNavigate } from "react-router";
 
-const Header = ({ currentUser, setCurrentUser }) => {
+const Header = ({ currentUser, setCurrentUser, setUserTodos }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [formData, setFormData] = useState({
     username: "",
@@ -12,6 +12,7 @@ const Header = ({ currentUser, setCurrentUser }) => {
     if (currentUser) {
       setCurrentUser(false);
       setIsLoggedIn(false);
+      setUserTodos(false);
       return;
     }
     setIsLoggedIn(!isLoggedIn);
@@ -39,6 +40,15 @@ const Header = ({ currentUser, setCurrentUser }) => {
       const data = await response.json();
       setCurrentUser(data);
       setIsLoggedIn(false);
+      const resToDos = await fetch("http://localhost:5500/todos", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+      const toDos = await resToDos.json();
+      setUserTodos(toDos);
       navigate("/dashboard");
     } catch (error) {
       console.log(error);

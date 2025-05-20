@@ -8,8 +8,8 @@ const app = express();
 const PORT = 5500;
 
 // middleware
-app.use(express.json());
 app.use(cors())
+app.use(express.json());
 app.post("/login", (req, res) => {const {username, password}= req.body;
 const newUser = users.find((user)=>user.username === username && user.password === password)
  res.json(newUser)});

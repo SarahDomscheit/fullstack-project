@@ -12,5 +12,26 @@
     "password": "LoginPW123!",
     "firstname": "Lisa",
     "lastname": "Lustig"
+  },
+  {
+    "userID": "u3",
+    "username": "FrFi",
+    "password": "LoginPW123!",
+    "firstname": "Franz",
+    "lastname": "Fischer"
+  },
+  {
+    "userID": "u4",
+    "username": "TiTa",
+    "password": "LoginPW123!",
+    "firstname": "Tina",
+    "lastname": "Tabelle"
+  },
+  {
+    "userID": "u5",
+    "username": "OtOr",
+    "password": "LoginPW123!",
+    "firstname": "Otto",
+    "lastname": "Ordentlich"
   }
 ]

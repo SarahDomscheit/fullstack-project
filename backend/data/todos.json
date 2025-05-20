@@ -6,15 +6,69 @@
     "state": false
   },
   {
+    "title": "Malte fahren",
+    "uID": "u1",
+    "text": "Malte möchte Dinkelbrot kaufen.",
+    "state": false
+  },
+  {
+    "title": "Brötchen für Boris",
+    "uID": "u1",
+    "text": "Boris braucht Sesam, aber bitte keine Mohnbrötchen!",
+    "state": false
+  },
+  {
+    "title": "Reifen aufpumpen",
+    "uID": "u1",
+    "text": "Fahrrad steht seit Monaten still – es wird Zeit!",
+    "state": false
+  },
+  {
     "title": "Oma Erna´s B-Day",
     "uID": "u2",
     "text": "Kukident-Torte abholen",
     "state": false
   },
   {
-    "title": "Malte fahren",
-    "uID": "u1",
-    "text": "Malte möchte Dinkelbrot kaufen.",
+    "title": "Learning 4.0",
+    "uID": "u2",
+    "text": "Wecker stellen um Feierabend nicht zu verpassen!",
+    "state": false
+  },
+  {
+    "title": "Zoom-Call mit Zottel",
+    "uID": "u2",
+    "text": "Der Ziegenverein hat dringende Fragen zur neuen Käseordnung.",
+    "state": false
+  },
+  {
+    "title": "Akten sortieren",
+    "uID": "u2",
+    "text": "Der Papierstapel auf dem Schreibtisch lebt langsam.",
+    "state": false
+  },
+  {
+    "title": "Socken sortieren",
+    "uID": "u3",
+    "text": "Endlich die Einzelsocken ausmisten – wer braucht schon 17 einzelne rechte?",
+    "state": false
+  },
+  {
+    "title": "Bananen wiegen",
+    "uID": "u3",
+    "text": "Franz will genau 1,5 Kilo – keine Banane mehr, keine weniger.",
+    "state": false
+  },
+  {
+    "title": "Hamsterkäfig reinigen",
+    "uID": "u3",
+    "text": "Hugo hat schon wieder unter die Zeitung gemacht.",
+    "state": false
+  },
+  {
+    "title": "Brief ans Finanzamt",
+    "uID": "u3",
+    "text": "Dieses Mal wirklich abschicken – nicht wieder 3 Wochen auf dem Drucker liegen lassen.",
     "state": false
   },
   {
@@ -24,9 +78,39 @@
     "state": false
   },
   {
-    "title": "Learning 4.0",
-    "uID": "u2",
-    "text": "Wecker stellen um Feierabend nicht zu verpassen!",
+    "title": "Akkuschrauber zurückgeben",
+    "uID": "u4",
+    "text": "Der Baumarkt nimmt ihn nur mit Kassenbon – wo ist der bloß?",
+    "state": false
+  },
+  {
+    "title": "Wackelzahn aufheben",
+    "uID": "u4",
+    "text": "Nicht vergessen, unter das Kopfkissen zu legen – die Zahnfee wartet.",
+    "state": false
+  },
+  {
+    "title": "Garten gießen",
+    "uID": "u4",
+    "text": "Die Sonnenblumen schauen schon traurig.",
+    "state": false
+  },
+  {
+    "title": "Schlüssel suchen",
+    "uID": "u5",
+    "text": "Wahrscheinlich wieder im Kühlschrank.",
+    "state": false
+  },
+  {
+    "title": "Einkaufsliste schreiben",
+    "uID": "u5",
+    "text": "Nur 5 Sachen… endet wie immer mit 20.",
+    "state": false
+  },
+  {
+    "title": "Katzenfutter nachkaufen",
+    "uID": "u5",
+    "text": "Minka akzeptiert nur das mit Ente und Lachs.",
     "state": false
   }
 ]
