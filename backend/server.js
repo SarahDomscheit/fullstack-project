@@ -35,7 +35,7 @@ app.post("/addtodo", (req, res) => {
   res.json({ message: "works" });
 });
 
-app.post("/editstate", (req, res) => {
+app.patch("/editstate", (req, res) => {
   const todos = JSON.parse(fs.readFileSync("./data/todos.json", "utf-8"));
   const { id } = req.body;
   const todo = todos.find((todo) => todo.id === id);
@@ -44,7 +44,7 @@ app.post("/editstate", (req, res) => {
   res.json({ message: "works" });
 });
 
-app.post("/deletetodo", (req, res) => {
+app.delete("/deletetodo", (req, res) => {
   const todos = JSON.parse(fs.readFileSync("./data/todos.json", "utf-8"));
   const { id } = req.body;
   const index = todos.findIndex((todo) => parseInt(todo.id) === parseInt(id));
