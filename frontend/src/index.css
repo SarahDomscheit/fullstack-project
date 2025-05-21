@@ -1,12 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Coming+Soon&family=Rock+Salt&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 body {
   background-color: beige;
   color: darkolivegreen;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 section {
@@ -33,14 +37,45 @@ button {
   color: white;
   padding: 0.5rem;
   border-radius: 8px;
+  font-weight: 700;
+  font-family: "Coming Soon", cursive;
+}
+span {
+  font-family: "Coming Soon", cursive;
+}
+
+.button-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
 }
 
 h2 {
-  margin: 0.5rem;
+  color: rgb(62, 77, 36);
+  font-family: "Rock Salt", cursive;
+}
+
+.welcome {
+  font-family: "Caveat", cursive;
+  font-size: 2rem;
 }
 
 button:hover {
   background-color: darkolivegreen;
+  transform: scale(1.05);
+}
+
+.deletebutton {
+  background-color: rgba(255, 0, 0, 0.7);
+  color: black;
+  border-radius: 20px;
+  font-weight: 800;
+}
+
+.deletebutton:hover {
+  background-color: red;
+  color: black;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
 }
 
 .log-wrapper {
@@ -86,14 +121,7 @@ button:hover {
   gap: 1.2rem;
   width: 100%;
   max-width: 500px;
-  margin: 0 auto;
-}
-
-.todo-card {
-  width: 100%;
-  max-width: 350px;
-  min-width: 220px;
-  box-sizing: border-box;
+  margin: 2rem auto;
 }
 
 .todo-card {
@@ -106,11 +134,108 @@ button:hover {
   color: darkslategray;
   min-width: 250px;
   max-width: 350px;
+  width: 100%;
 }
 
 .todo-card h3 {
   margin: 0 0 0.5rem 0;
   color: darkolivegreen;
+  font-family: "Coming Soon", cursive;
+}
+
+.todo-card button {
+  margin: 0.5rem 0;
+}
+
+.todo-card p {
+  font-family: "Coming Soon", cursive;
+}
+
+.addtodo-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+
+.addtodo-form {
+  background: #f8f8f8;
+  padding: 2rem 2.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(85, 107, 47, 0.07);
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  width: 320px;
+  border: 1px solid darkolivegreen;
+}
+
+.addtodo-form label {
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+  color: darkolivegreen;
+}
+
+.addtodo-form input[type="text"],
+.addtodo-form textarea {
+  padding: 0.6rem;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  background: #fffbe6;
+  color: darkslategray;
+  resize: vertical;
+}
+
+.addtodo-form textarea {
+  min-height: 70px;
+  max-height: 200px;
+}
+
+.addtodo-form button[type="submit"] {
+  background-color: darkslategray;
+  color: white;
+  padding: 0.7rem;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.addtodo-form button[type="submit"]:hover {
+  background-color: darkolivegreen;
+  transform: scale(1.05);
+}
+
+.todo-card.completed {
+  opacity: 0.6;
+  text-decoration: line-through;
+  background: #e6ffe6;
+  border-left: 4px solid #4caf50;
+}
+
+.toggle-state {
+  display: inline-block;
+  padding: 0.3em 0.8em;
+  border-radius: 20px;
+  font-size: 0.9em;
+  font-weight: bold;
+  margin-bottom: 0.7em;
+  color: #666;
+  border: 1px solid #bbb;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.todo-card.completed .toggle-state {
+  background: #4caf50;
+  color: #fff;
+  border-color: #4caf50;
 }
 
 @media (max-width: 500px) {

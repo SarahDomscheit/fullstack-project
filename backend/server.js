@@ -32,7 +32,7 @@ app.post("/addtodo", (req, res) => {
   newTodo.id = todos.length + 1;
   todos.push(newTodo);
   fs.writeFileSync("./data/todos.json", JSON.stringify(todos), "utf-8");
-  res.json({ message: "works" });
+  res.json({ message: "todo hinzugefügt" });
 });
 
 app.patch("/editstate", (req, res) => {
@@ -41,7 +41,7 @@ app.patch("/editstate", (req, res) => {
   const todo = todos.find((todo) => todo.id === id);
   todo.state = !todo.state;
   fs.writeFileSync("./data/todos.json", JSON.stringify(todos), "utf-8");
-  res.json({ message: "works" });
+  res.json(todo);
 });
 
 app.delete("/deletetodo", (req, res) => {

@@ -58,7 +58,7 @@ const Header = ({ currentUser, setCurrentUser, setUserTodos }) => {
     <>
       <div className="header-wrapper">
         <NavLink to="/">
-          <h2>Beautiful Header</h2>{" "}
+          <h2>Taskify</h2>{" "}
         </NavLink>
         <div className="log-wrapper">
           <div className="button-wrapper">
