@@ -1,23 +1,65 @@
 import express from "express";
-import todos from "./data/todos.json" with {type: "json"};
-import users from "./data/users.json" with {type: "json"};
-import cors from "cors"
-
+import cors from "cors";
+import fs, { readFileSync } from "fs";
 
 const app = express();
 const PORT = 5500;
 
 // middleware
-app.use(cors())
+app.use(cors());
 app.use(express.json());
-app.post("/login", (req, res) => {const {username, password}= req.body;
-const newUser = users.find((user)=>user.username === username && user.password === password)
- res.json(newUser)});
+
+app.post("/login", (req, res) => {
+  const users = JSON.parse(fs.readFileSync("./data/users.json", "utf-8"));
+
+  const { username, password } = req.body;
+  const newUser = users.find(
+    (user) => user.username === username && user.password === password
+  );
+  res.json(newUser);
+});
 
 app.post("/todos", (req, res) => {
-    const {userID} = req.body
-    const userTodos = todos.filter((todo)=> todo.uID === userID)
-    res.json(userTodos)});
+  const { userID } = req.body;
+  const todos = JSON.parse(fs.readFileSync("./data/todos.json", "utf-8"));
+  const userTodos = todos.filter((todo) => todo.uID === userID);
+  res.json(userTodos);
+});
+
+app.post("/addtodo", (req, res) => {
+  const todos = JSON.parse(fs.readFileSync("./data/todos.json", "utf-8"));
+  const newTodo = req.body;
+  newTodo.id = todos.length + 1;
+  todos.push(newTodo);
+  fs.writeFileSync("./data/todos.json", JSON.stringify(todos), "utf-8");
+  res.json({ message: "works" });
+});
+
+app.post("/editstate", (req, res) => {
+  const todos = JSON.parse(fs.readFileSync("./data/todos.json", "utf-8"));
+  const { id } = req.body;
+  const todo = todos.find((todo) => todo.id === id);
+  todo.state = !todo.state;
+  fs.writeFileSync("./data/todos.json", JSON.stringify(todos), "utf-8");
+  res.json({ message: "works" });
+});
+
+app.post("/deletetodo", (req, res) => {
+  const todos = JSON.parse(fs.readFileSync("./data/todos.json", "utf-8"));
+  const { id } = req.body;
+  const index = todos.findIndex((todo) => parseInt(todo.id) === parseInt(id));
+  if (index !== -1) {
+    todos.splice(index, 1);
+    fs.writeFileSync(
+      "./data/todos.json",
+      JSON.stringify(todos, null, 2),
+      "utf-8"
+    );
+    res.json({ message: "works" });
+  } else {
+    res.status(404).json({ message: "Todo nicht gefunden" });
+  }
+});
 
 app.listen(PORT, () => {
   console.log(`Server: http://localhost:${PORT}`);

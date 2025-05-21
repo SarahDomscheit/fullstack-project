@@ -18,3 +18,39 @@ Content-Type: application/json
     "firstname": "Max",
     "lastname": "Mustermann"
   }
+
+###
+POST http://localhost:5500/addtodo HTTP/1.1 
+Content-Type: application/json
+
+ {
+    "title": "Einkaufsliste schreiben",
+    "uID": "u5",
+    "text": "Nur 5 Sachen… endet wie immer mit 20.",
+    "state": false
+  }
+
+###
+POST http://localhost:5500/editstate HTTP/1.1 
+Content-Type: application/json
+
+{
+    "id": 20,
+    "title": "Einkaufsliste schreiben",
+    "uID": "u5",
+    "text": "Nur 5 Sachen… endet wie immer mit 20.",
+    "state": false
+  }
+
+
+###
+POST http://localhost:5500/deletetodo HTTP/1.1 
+Content-Type: application/json
+
+{
+    "id": 22,
+    "title": "Einkaufsliste schreiben",
+    "uID": "u5",
+    "text": "Nur 5 Sachen… endet wie immer mit 20.",
+    "state": false
+  }
